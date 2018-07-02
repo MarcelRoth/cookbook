@@ -1,7 +1,7 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1529947296513" ID="ID_1118419486" MODIFIED="1529947316174" TEXT="CodeKitchen">
-<node CREATED="1529948580601" FOLDED="true" ID="ID_1821169257" MODIFIED="1529949141418" POSITION="left" TEXT="Ideen">
+<node CREATED="1529948580601" ID="ID_1821169257" MODIFIED="1529955339000" POSITION="left" TEXT="Ideen">
 <node CREATED="1529947698042" ID="ID_1103818541" MODIFIED="1529948762585" TEXT="Rezepte einlesen">
 <node CREATED="1529947858467" FOLDED="true" ID="ID_123117841" MODIFIED="1529948778531" TEXT="Was geh&#xf6;rt zu einem Rezept?">
 <node CREATED="1529948061010" ID="ID_370369169" MODIFIED="1529948063385" TEXT="Zutaten"/>
@@ -40,14 +40,14 @@
 <node CREATED="1529948227057" ID="ID_1025280004" MODIFIED="1529948592578" TEXT="Security"/>
 </node>
 <node CREATED="1529948643210" ID="ID_1044212768" MODIFIED="1529948645444" POSITION="right" TEXT="Backlog">
-<node CREATED="1529948901315" FOLDED="true" ID="ID_310742302" MODIFIED="1529949186986">
+<node CREATED="1529948901315" ID="ID_310742302" MODIFIED="1529955916211">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Wir wollen ein Rezept definieren,<br />speichern&#160;und laden k&#246;nnen
+      Wir wollen ein Rezept per Kommandozeilenaufruf definieren,<br />speichern&#160;und laden k&#246;nnen
     </p>
   </body>
 </html>
@@ -57,6 +57,11 @@
 <node CREATED="1529949103369" ID="ID_235571270" MODIFIED="1529949109573" TEXT="beliebiger Speicherort"/>
 </node>
 <node CREATED="1529949110625" ID="ID_542566182" MODIFIED="1529949132812" TEXT="Laden durch genaue Angabe des Rezeptnamens"/>
+<node CREATED="1529955918375" ID="ID_1401051987" MODIFIED="1529955923954" TEXT="Syntax">
+<node CREATED="1529955926784" ID="ID_570044997" MODIFIED="1529955995522" TEXT="python rezept anlegen NameDesRezepts"/>
+<node CREATED="1529955926784" ID="ID_1932517500" MODIFIED="1529956014793" TEXT="python rezept lesen NameDesRezepts"/>
+<node CREATED="1529955926784" ID="ID_1170976332" MODIFIED="1529955987517" TEXT="python rezept hinzufuegen NameDesRezepts ergaenzterText"/>
+</node>
 </node>
 </node>
 </node>
