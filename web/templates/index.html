@@ -1,0 +1,25 @@
+<html>
+<title>My Cookbook</title>
+<h2>My favourite ones</h2>
+
+<p>Every recipe is worthy</p>
+
+<ul>
+{% for recipe in recipes %}
+<li><strong>{{ recipe.name }}</strong>: <strong>{{ recipe.content }}</strong>
+{% else %}
+<em>No recipe</em>
+{% endfor %}
+</ul>
+
+<h3>Add a new recipe?</h3>
+
+<form method="POST" action="/new">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name(size=40) }}
+    <br/>
+    {{ form.content.label }} {{ form.content(size=255) }}
+    <br/>
+    {{ form.submit }}
+</form>
+</html>
