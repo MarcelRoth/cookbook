@@ -1,3 +1,3 @@
-file = open("pizza.rzp", "a")
+file = open("Pizza.rzp", "a")
 file.write("was anderes\n")
 file.close();

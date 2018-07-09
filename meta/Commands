@@ -1,0 +1,12 @@
+key binding
+* Autocomplete: STRG + Space
+* Quick-Fix (easy correction for errors): ALT + Enter
+* find Pycharm command: STRG + SHIFT + a
+* Help on class/function: STRG + q
+* Go to declation: STRG + b
+
+call in Terminal
+    python rezeptManagement.py load Pizza
+    python rezeptManagement.py create Pizza
+    python rezeptManagement.py add Pizza addedLine
+    python rezeptOeffnen.py Pizza

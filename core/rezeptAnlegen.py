@@ -1,3 +1,3 @@
-file = open("pizza.rzp", "w")
+file = open("Pizza.rzp", "w")
 file.write("Zutaten\n")
 file.close()
