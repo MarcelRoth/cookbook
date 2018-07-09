@@ -4,6 +4,7 @@ key binding
 * find Pycharm command: STRG + SHIFT + a
 * Help on class/function: STRG + q
 * Go to declation: STRG + b
+* Update Project: STRG + t (Options "Rebase" und "Using Stash" in opened Window)
 
 call in Terminal
     python rezeptManagement.py load Pizza
