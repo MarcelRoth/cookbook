@@ -1,5 +1,6 @@
 import sys
-import rezeptOeffnen
+from web.core import rezeptOeffnen
+
 
 def create(name : str) :
     file = open(name  + ".rzp", "wt")
