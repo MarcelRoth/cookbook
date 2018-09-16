@@ -1,41 +1,42 @@
-import os.path
 import json
+import os.path
 
-from flask import Flask, render_template, request
+from flask import render_template, request, Blueprint
+from flask import current_app as app
 
 from web.core import rezeptOeffnen
 
-app = Flask(__name__)
-RECIPE_NAME_INPUT = 'recipeNameInput'
+bp = Blueprint('recipe', __name__, url_prefix='/', template_folder='templates')
 
-@app.route("/")
+
+@bp.route("/")
 def hello():
-    return render_template('search.html',
-                           recipeNameInput=RECIPE_NAME_INPUT)
+    return render_template('search.html')
 
 
-@app.route("/recipe/show")
+@bp.route("/recipe/show")
 def show():
-    recipe_name = request.args.get(RECIPE_NAME_INPUT)
+    recipe_name = request.args.get("recipeName")
     if os.path.isfile(recipe_name + ".rzp") :
         data=json.loads(rezeptOeffnen.load(recipe_name))
         return render_template('recipe.html',
                                recipeNameData=data.get("recipeName"),
-                               ZutatenData=data.get("Zutaten"),
-                               ZubereitungData=data.get("Zubereitung")
+                               incredNameData=data.get("incredName"),
+                               prepTextData=data.get("prepText")
                                )
     else:
         return 'Rezept {} nicht gefunden.'.format(recipe_name)
 
 
-@app.route("/recipe/create")
+@bp.route("/recipe/create")
 def create():
     return render_template('recipe.html')
 
 
-@app.route("/recipe/save", methods=['POST'])
+@bp.route("/recipe/save", methods=['POST'])
 def save():
-    file = open(request.form.get("recipeName")+".rzp", "w")
+    save_path = app.config.get("SAVE_PATH")
+    file = open(save_path + request.form.get("recipeName") + ".rzp", "w")
     file.write(json.dumps(request.form))
     return render_template('recipe.html',
                           recipeNameData=request.form.get("recipeName"),

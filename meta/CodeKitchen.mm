@@ -40,7 +40,14 @@
 <node CREATED="1529948227057" ID="ID_1025280004" MODIFIED="1529948592578" TEXT="Security"/>
 </node>
 <node CREATED="1529948643210" ID="ID_1044212768" MODIFIED="1529948645444" POSITION="right" TEXT="Backlog">
-<node CREATED="1529948901315" FOLDED="true" ID="ID_310742302" MODIFIED="1532712163451">
+<node CREATED="1533583516615" ID="ID_1745610821" MODIFIED="1533583926746" TEXT="Wir wollen nach einem Rezept sinnvoll suchen k&#xf6;nnen"/>
+<node CREATED="1533583712603" ID="ID_1863715107" MODIFIED="1533583743767" TEXT="Wir wollen ein sinnvolles Speicherformat f&#xfc;r ein Rezept implementieren"/>
+<node CREATED="1533583672116" ID="ID_479051861" MODIFIED="1533583701367" TEXT="Wir wollen ein Rezept an einer konfigurierbaren Stelle abspeichern k&#xf6;nnen"/>
+<node CREATED="1533583619732" ID="ID_175410948" MODIFIED="1533583641095" TEXT="Wir wollen ein Rezept in einer Datenbank speichern"/>
+<node CREATED="1533583651099" ID="ID_718520471" MODIFIED="1533583661359" TEXT="Wir wollen ein Rezept ab&#xe4;ndern k&#xf6;nnen"/>
+</node>
+<node CREATED="1536945257456" ID="ID_581259017" MODIFIED="1536945287725" POSITION="right" TEXT="done">
+<node CREATED="1529948901315" FOLDED="true" ID="ID_310742302" MODIFIED="1536945289929">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -62,13 +69,13 @@
 <node CREATED="1529955926784" ID="ID_1170976332" MODIFIED="1529955987517" TEXT="python rezept hinzufuegen NameDesRezepts ergaenzterText"/>
 </node>
 </node>
-<node CREATED="1532711492939" FOLDED="true" ID="ID_245917141" MODIFIED="1533582835871" TEXT="Wir wollen ein Rezept in einer WebGui anzeigen lassen?">
+<node CREATED="1532711492939" FOLDED="true" ID="ID_245917141" MODIFIED="1536945274418" TEXT="Wir wollen ein Rezept in einer WebGui anzeigen lassen?">
 <node CREATED="1532711707832" ID="ID_1747770067" MODIFIED="1532711815499" TEXT="WebGui hat Eingabefeld f&#xfc;r Rezeptname"/>
 <node CREATED="1532711816544" ID="ID_1710217286" MODIFIED="1532712153918" TEXT="Beim Klicken auf Load Button wird Rezeptinhalt angezeigt"/>
 <node CREATED="1532711862809" ID="ID_971617190" MODIFIED="1532711896323" TEXT="Rezept liegt bereits vor"/>
 <node CREATED="1532711898919" ID="ID_619260275" MODIFIED="1532711953379" TEXT="Wird das Rezept nicht gefunden, wird eine Infomeldung angezeigt"/>
 </node>
-<node CREATED="1533583641403" FOLDED="true" ID="ID_1437608277" MODIFIED="1533583924793" TEXT="Wir wollen ein Rezept anlegen k&#xf6;nnen">
+<node CREATED="1533583641403" ID="ID_1437608277" MODIFIED="1536945293640" TEXT="Wir wollen ein Rezept anlegen k&#xf6;nnen">
 <node CREATED="1533583757292" ID="ID_1869729549" MODIFIED="1533583760575" TEXT="In the Gui"/>
 <node CREATED="1533583761172" FOLDED="true" ID="ID_1652897898" MODIFIED="1533583819687" TEXT="Eingabefelder">
 <node CREATED="1533583777524" ID="ID_670721114" MODIFIED="1533583779975" TEXT="Name"/>
@@ -88,8 +95,7 @@
       abspeichern als Datei<br />au&#223;erhalb der Propjektstruktur
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1533583894244" ID="ID_1221699275" MODIFIED="1533583910641">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -100,16 +106,10 @@
       &#214;ffnen soll selben Pfad<br />verwenden
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node CREATED="1533583516615" ID="ID_1745610821" MODIFIED="1533583926746" TEXT="Wir wollen nach einem Rezept sinnvoll suchen k&#xf6;nnen"/>
-<node CREATED="1533583712603" ID="ID_1863715107" MODIFIED="1533583743767" TEXT="Wir wollen ein sinnvolles Speicherformat f&#xfc;r ein Rezept implementieren"/>
-<node CREATED="1533583672116" ID="ID_479051861" MODIFIED="1533583701367" TEXT="Wir wollen ein Rezept an einer konfigurierbaren Stelle abspeichern k&#xf6;nnen"/>
-<node CREATED="1533583619732" ID="ID_175410948" MODIFIED="1533583641095" TEXT="Wir wollen ein Rezept in einer Datenbank speichern"/>
-<node CREATED="1533583651099" ID="ID_718520471" MODIFIED="1533583661359" TEXT="Wir wollen ein Rezept ab&#xe4;ndern k&#xf6;nnen"/>
 </node>
 </node>
 </map>

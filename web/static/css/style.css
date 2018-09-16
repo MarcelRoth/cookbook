@@ -1,3 +1,9 @@
 .dudu {
     background-color: lightblue;
+    -webkit-border-radius: 6px;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+  margin: 0;
 }
