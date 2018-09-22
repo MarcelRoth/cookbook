@@ -20,14 +20,14 @@ def show():
     save_path = app.config.get("SAVE_PATH")
     if os.path.isfile(save_path + recipe_name + ".rzp"):
         data = json.loads(rezeptOeffnen.load(save_path + recipe_name))
-        return render_template('recipe.html', data = data)
+        return render_template('recipe.html', data=data)
     else:
         return 'Rezept {} nicht gefunden.'.format(recipe_name)
 
 
 @bp.route("/recipe/create")
 def create():
-    return render_template('recipe.html', data = dict())
+    return render_template('recipe.html', data=dict())
 
 
 @bp.route("/recipe/save", methods=['POST'])
@@ -35,4 +35,4 @@ def save():
     save_path = app.config.get("SAVE_PATH")
     file = open(save_path + request.form.get("recipeName") + ".rzp", "w")
     file.write(json.dumps(request.form, indent=4))
-    return render_template('recipe.html', data = request.form)
+    return render_template('recipe.html', data=request.form)

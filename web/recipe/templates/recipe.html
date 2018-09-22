@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Rezept anlegen</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-
-<body>
+{% extends "baseLayout.html" %}
+{% block body %}
 <div>
     <form action="/recipe/save" method="post">
         <label>Rezeptname:</label>
@@ -22,5 +16,4 @@
         <input class="dudu" type="submit" value="Speichern">
     </form>
 </div>
-</body>
-</html>
+{% endblock %}
