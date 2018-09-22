@@ -14,6 +14,7 @@ def create_app(debug=False):
     app.register_blueprint(recipe.bp)
     return app
 
+
 if __name__ == "__main__":
     app = create_app()
     app.run()
