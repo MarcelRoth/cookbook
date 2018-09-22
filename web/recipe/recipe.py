@@ -17,29 +17,22 @@ def hello():
 @bp.route("/recipe/show")
 def show():
     recipe_name = request.args.get("recipeName")
-    if os.path.isfile(recipe_name + ".rzp") :
-        data=json.loads(rezeptOeffnen.load(recipe_name))
-        return render_template('recipe.html',
-                               recipeNameData=data.get("recipeName"),
-                               incredNameData=data.get("incredName"),
-                               prepTextData=data.get("prepText")
-                               )
+    save_path = app.config.get("SAVE_PATH")
+    if os.path.isfile(save_path + recipe_name + ".rzp"):
+        data = json.loads(rezeptOeffnen.load(save_path + recipe_name))
+        return render_template('recipe.html', data = data)
     else:
         return 'Rezept {} nicht gefunden.'.format(recipe_name)
 
 
 @bp.route("/recipe/create")
 def create():
-    return render_template('recipe.html')
+    return render_template('recipe.html', data = dict())
 
 
 @bp.route("/recipe/save", methods=['POST'])
 def save():
     save_path = app.config.get("SAVE_PATH")
     file = open(save_path + request.form.get("recipeName") + ".rzp", "w")
-    file.write(json.dumps(request.form))
-    return render_template('recipe.html',
-                          recipeNameData=request.form.get("recipeName"),
-                          ZutatenData=request.form.get("Zutaten"),
-                          ZubereitungData=request.form.get("Zubereitung")
-                          )
+    file.write(json.dumps(request.form, indent=4))
+    return render_template('recipe.html', data = request.form)

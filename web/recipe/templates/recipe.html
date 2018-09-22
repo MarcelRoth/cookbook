@@ -9,15 +9,15 @@
 <div>
     <form action="/recipe/save" method="post">
         <label>Rezeptname:</label>
-        <input type="text" name=recipeName value={{recipeNameData}}><br>
+        <input type="text" name=recipeName value={{data["recipeName"]}}><br>
 
         <label>Zutaten:</label>
         <input type="number" name=incredAmount min="0">
         <input type="text" name=incredmeasure>
-        <input type="text" name=incredName value={{incredNameData}}><br>
+        <input type="text" name=incredName value={{data["incredName"]}}><br>
 
         <label>Zubereitungsschritte:</label>
-        <input type="text" name=prepText value={{prepTextData}}><br>
+        <input type="text" name=prepText value={{data["prepText"]}}><br>
 
         <input class="dudu" type="submit" value="Speichern">
     </form>
