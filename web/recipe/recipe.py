@@ -27,12 +27,36 @@ def show():
 
 @bp.route("/recipe/create")
 def create():
-    return render_template('recipe.html', data=dict())
+    return render_template('recipe.html', data=create_empty_recipe_data())
+
+
+def reformat(formData):
+    outData = dict()
+    outData["recipeName"] = formData["recipeName"]
+    all_ingreds = list()
+    single_ingred = dict()
+    single_ingred["ingredAmount"] = formData["ingredAmount1"]
+    single_ingred["ingredMeasure"] = formData["ingredMeasure1"]
+    single_ingred["ingredName"] = formData["ingredName1"]
+    all_ingreds.append(single_ingred)
+    single_ingred = dict()
+    single_ingred["ingredAmount"] = formData["ingredAmount2"]
+    single_ingred["ingredMeasure"] = formData["ingredMeasure2"]
+    single_ingred["ingredName"] = formData["ingredName2"]
+    all_ingreds.append(single_ingred)
+    outData["allIngreds"] = all_ingreds
+    outData["prepText"] = formData["prepText"]
+    return outData
 
 
 @bp.route("/recipe/save", methods=['POST'])
 def save():
     save_path = app.config.get("SAVE_PATH")
     file = open(save_path + request.form.get("recipeName") + ".rzp", "w")
-    file.write(json.dumps(request.form, indent=4))
-    return render_template('recipe.html', data=request.form)
+    data = reformat(request.form)
+    file.write(json.dumps(data, indent=4))
+    return render_template('recipe.html', data=data)
+
+
+def create_empty_recipe_data():
+    return {"allIngreds": [{}, {}]}
