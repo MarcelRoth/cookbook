@@ -5,9 +5,9 @@ function myAlert() {
 function initialize() {
     var $form = $("form#recipe_search");
     console.log($form);
-debugger;
+// debugger;
     $form.submit(function(event) {
-    debugger;
+    // debugger;
         console.log("triggered")
         myAlert();
         event.preventDefault();

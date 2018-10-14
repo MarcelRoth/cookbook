@@ -1,17 +1,31 @@
 {% extends "baseLayout.html" %}
+{% block headAdd %}
+    <script src="{{url_for('recipe.static', filename='js/recipe.js')}}"></script>
+{% endblock %}
 {% block body %}
 <div>
-    <form action="/recipe/save" method="post">
+    <form action="/recipe/save" method="post" accept-charset="utf-8">
         <label>Rezeptname:</label>
         <input type="text" name=recipeName value="{{data['recipeName']}}"><br>
 
-        <label>Zutaten:</label><br>
+        <label>Zutaten:</label>
+        <div id="ingredients">
+        <div class="ingredientTemplate" style="display:none">
+            <input type="number" name="allIngreds[$index][ingredAmount]">
+            <input type="text" name="allIngreds[$index][ingredMeasure]">
+            <input type="text" name="allIngreds[$index][ingredName]">
+            <button class="deleteIngredient">X</button>
+        </div>
         {% for ingred in data['allIngreds'] %}
-            <input type="number" name=ingredAmount{{loop.index}} min="0" value="{{ingred['ingredAmount']}}">
-            <input type="text" name=ingredMeasure{{loop.index}} value="{{ingred['ingredMeasure']}}">
-            <input type="text" name=ingredName{{loop.index}} value="{{ingred['ingredName']}}"><br>
+            <div class="ingredientSingle">
+            <input type="number" name="allIngreds[{{loop.index}}][ingredAmount]" min="0" value="{{ingred['ingredAmount']}}">
+            <input type="text" name="allIngreds[{{loop.index}}][ingredMeasure]" value="{{ingred['ingredMeasure']}}">
+            <input type="text" name="allIngreds[{{loop.index}}][ingredName]" value="{{ingred['ingredName']}}">
+            <button class="deleteIngredient">X</button>
+            </div>
         {% endfor %}
 
+        </div>
         <label>Zubereitungsschritte:</label>
         <input type="text" name=prepText value="{{data['prepText']}}"><br>
 
