@@ -57,10 +57,7 @@ def reformat(formData):
                 single_ingred = all_ingreds_pre.setdefault(ingred_no, dict())
                 single_ingred[groups[2]] = formData[key]
 
-    all_ingreds = list()
-    for key in sorted(all_ingreds_pre.keys()) :
-        all_ingreds.append(all_ingreds_pre[key])
-
+    all_ingreds = [all_ingreds_pre[key] for key in sorted(all_ingreds_pre.keys())]
     outData["allIngreds"] = all_ingreds
     outData["prepText"] = formData["prepText"]
     return outData
